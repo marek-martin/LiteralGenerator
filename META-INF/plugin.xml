@@ -1,0 +1,69 @@
+<idea-plugin version="2">
+  <id>ijp.literalgenerator</id>
+  <name>Literal Generator</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description><![CDATA[
+      Generate random literal values.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+	  <group id="LiteralGenerator.GeneratorGroup" description="Generate Random Literal Values" text="Generate Literals" popup="true"/>
+
+	  <action id="LiteralGenerator.GenerateString" class="ijp.literalgenerator.GenerateString" text="Generate String" description="Generate Random String Literal">
+		  <add-to-group group-id="LiteralGenerator.GeneratorGroup"/>
+		  <keyboard-shortcut first-keystroke="control alt G" second-keystroke="S" keymap="$default"/>
+	  </action>
+
+	  <action id="LiteralGenerator.GenerateInteger" class="ijp.literalgenerator.GenerateInteger" text="Generate Integer" description="Generate Random Integer Literal">
+		  <add-to-group group-id="LiteralGenerator.GeneratorGroup"/>
+		  <keyboard-shortcut first-keystroke="control alt G" second-keystroke="I" keymap="$default"/>
+	  </action>
+
+	  <action id="LiteralGenerator.GenerateLong" class="ijp.literalgenerator.GenerateLong" text="Generate Long" description="Generate Random Long Literal">
+		  <add-to-group group-id="LiteralGenerator.GeneratorGroup"/>
+		  <keyboard-shortcut first-keystroke="control alt G" second-keystroke="L" keymap="$default"/>
+	  </action>
+
+	  <action id="LiteralGenerator.GenerateFloat" class="ijp.literalgenerator.GenerateFloat" text="Generate Float" description="Generate Random Float Literal">
+		  <add-to-group group-id="LiteralGenerator.GeneratorGroup"/>
+		  <keyboard-shortcut first-keystroke="control alt G" second-keystroke="F" keymap="$default"/>
+	  </action>
+
+	  <action id="LiteralGenerator.GenerateDouble" class="ijp.literalgenerator.GenerateDouble" text="Generate Double" description="Generate Random Double Literal">
+		  <add-to-group group-id="LiteralGenerator.GeneratorGroup"/>
+		  <keyboard-shortcut first-keystroke="control alt G" second-keystroke="D" keymap="$default"/>
+	  </action>
+  </actions>
+
+</idea-plugin>
